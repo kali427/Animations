@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition_timing_function</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+            color: white;
+        }
+        body *{
+            box-sizing: border-box;
+        }
+        .goal{
+            height: 80px;
+            width: 97vw;
+            margin: 10px;
+            z-index: -1;
+
+        }
+        .goal::before{
+            height: 80px;
+            width: 100px;
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: rgb(50, 72, 112);
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+            transition-duration: 2s;
+        }
+        .goal:hover::before{
+            display: flex;
+            color: white;
+            content: "hello world";
+            align-items: center;
+            justify-content: center;
+            width: 98.4%;
+            background-color: rgb(46, 54, 77);
+        }
+        .goal-h{
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            background-color: rgb(46, 54, 77);
+        }
+        .goals{
+            display: block;
+            background: no-repeat center/100% url("./img/a.jpg");
+            position: absolute;
+            font-size: 40px;
+        }
+
+        
+        .goal::after{
+            height: 80px;
+            width: 100px;
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: rgb(50, 72, 112);
+        }
+        .goal:hover::after{
+            content: "#";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="goals">
+        <h1 class="goal-h">OUR GOALS</h1>
+        <div class="goal"></div>
+        <div class="goal"></div>
+        <div class="goal"></div>
+        <div class="goal"></div>
+        <div class="goal"></div>
+        <div class="goal"></div>
+    </div>
+</body>
+</html>
