@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .main{
+            width: 30px;
+            height: 30px;
+            background-color: lightsalmon;
+            z-index: 2;
+            position: absolute;
+        }
+        .main:hover{
+            background-color: lightseagreen;
+            height: 100vh;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            transition-property: z-index, background-color, width, height;
+            transition-duration: 2s;
+            z-index: 1;
+        }
+        .cancel{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 10px;
+
+            background-color: salmon;
+            text-align: center;
+            z-index: 1;
+        }
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            font-size: 100px;
+            color: white;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <div class="cancel">x</div>
+    <h1>Content Here</h1>
+</body>
+</html>
