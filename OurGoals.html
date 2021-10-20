@@ -11,9 +11,11 @@
             font-family: sans-serif;
             color: white;
         }
+        
         body *{
             box-sizing: border-box;
         }
+
         .goal{
             height: 80px;
             width: 97vw;
@@ -21,6 +23,7 @@
             z-index: -1;
 
         }
+
         .goal::before{
             height: 80px;
             width: 100px;
@@ -32,6 +35,7 @@
             transition-timing-function: ease-in-out;
             transition-duration: 2s;
         }
+
         .goal:hover::before{
             display: flex;
             color: white;
@@ -41,11 +45,12 @@
             width: 98.4%;
             background-color: rgb(46, 54, 77);
         }
+
         .goal-h{
             color: white;
             text-align: center;
             font-size: 50px;
-            background-color: rgb(46, 54, 77);
+            background-image: linear-gradient(to right, rgb(46, 54, 77),  rgb(50, 72, 112) , rgb(46, 54, 77));
         }
         .goals{
             display: block;
@@ -63,6 +68,7 @@
             position: absolute;
             background-color: rgb(50, 72, 112);
         }
+        
         .goal:hover::after{
             content: "#";
             display: flex;
