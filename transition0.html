@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .main{
+            width: 50px;
+            height: 50px;
+            border: 0px;
+            background-color: lightsalmon;
+            z-index: 2;
+            position: absolute;
+            transition: all 2s ease-in-out;
+            overflow: hidden;
+            color: lightsalmon;
+
+
+        }
+        .main:focus{
+            background-color: lightseagreen;
+            height: 100vh;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            z-index: 1;
+            color: white;
+            
+        }
+        .main:focus .click{
+            display: none;
+        }
+        .cancel{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            background-color: salmon;
+            text-align: center;
+            z-index: 1;
+        }
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            font-size: 100px;
+            z-index: 5;
+        }
+        .click{
+            color: white;
+            position: relative;
+            z-index: 6;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="main">
+        <span class="click"><b>CLick</b></span>
+        <h1>Content Here</h1>
+    </button>
+    <div class="cancel">x</div>
+</body>
+</html>
