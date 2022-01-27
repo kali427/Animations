@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Slider</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Slider</title>
+</head>
+<body>
 
-        <div class="helloworld">
-            <h1>Hello World!</h1>
-        </div>
+    <div class="helloworld">
+        <h1>Hello World!</h1>
+    </div>
 
     <!-- script to run animation when slider (element) comes into view. -->
     <script>
@@ -24,4 +24,25 @@
 
                 var windowheight = window.innerHeight;
                 var revealtop = reveals[i].getBoundingClientRect().top;
-            
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active')
+                }
+
+            }
+
+        }
+    </script>
+    <!-- script ends  -->
+
+    <div class="slider reveal">
+        <div class="slider-content">I am Programmer</div>
+        <div class="slider-content">I am Freelancer</div>
+        <div class="slider-content">I am Hacker</div>
+        <div class="slider-content">I am Youtuber</div>
+        <div class="slider-content">I am the Leader.</div>
+    </div>
+
+</body>
+</html>
