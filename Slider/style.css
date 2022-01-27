@@ -22,3 +22,25 @@ body{
 
 .slider {
     height: 500px;
+    margin-bottom: 25px;
+}
+
+.slider-content {
+    margin: 5px;
+    background: black;
+    color: rgb(161, 123, 26);
+    overflow: hidden;
+    font-size: 40px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+
+.reveal{
+    width: 0px !important;
+    transition: all 1s ease-out;
+}
+
+.reveal.active{
+        width: 96vw !important;
+}
